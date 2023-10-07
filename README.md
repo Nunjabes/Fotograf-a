@@ -30,3 +30,65 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+/* Estilos para la maqueta web */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+// Obtener la hora actual
+var hora = new Date().getHours();
+
+// Elemento HTML donde mostraremos el mensaje
+var mensaje = document.getElementById("saludo");
+
+// Definir el mensaje de saludo
+var saludo;
+
+if (hora < 12) {
+    saludo = "Buenos días";
+} else if (hora < 18) {
+    saludo = "Buenas tardes";
+} else {
+    saludo = "Buenas noches";
+}
+
+// Mostrar el mensaje en la página web
+mensaje.textContent = saludo;
